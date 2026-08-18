@@ -8,7 +8,7 @@ def home():
 
 @app.route('/juego')
 def juego():
-    return render_template('numero-secreto.html') # O el nombre exacto de tu archivo HTML
+    return render_template('juego/numero-secreto.html')
 
 if __name__ == '__main__':
     app.run()
