@@ -1,5 +1,5 @@
-gunicorn app:app
-Plaintext
 Flask
 gunicorn
+gunicorn app:app
+Plaintext
 psycopg2-binary
