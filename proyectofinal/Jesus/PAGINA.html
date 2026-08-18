@@ -212,7 +212,8 @@
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="juego/numero-secerto.html">Juego</a></li>
+                <!-- CORREGIDO: Ahora apunta directamente a la ruta de Flask -->
+                <li><a href="/juego">Juego</a></li>
                 <li>
                     <a href="https://sites.google.com/view/techforge-blog?pli=1" target="_blank">
                         Blog
@@ -239,7 +240,7 @@
         </div>
 
         <div class="foto-container">
-            <img src="mi.png" alt="Fotografía personal">
+            <img src="{{ url_for('static', filename='mi.png') }}" alt="Fotografía personal">
         </div>
     </section>
 
@@ -277,8 +278,8 @@
         <p style="color: #94a3b8; margin-top: 0.5rem; margin-bottom: 1.5rem;">
             Estos son algunos de los proyectos que he realizado durante mi formación.
         </p>
-        <!-- Botón para ir a la página del juego -->
-        <a href="juego/numero-secreto.html" class="boton">🎮 Jugar Adivina el Número</a>
+        <!-- CORREGIDO: Ahora apunta directamente a la ruta de Flask -->
+        <a href="/juego" class="boton">🎮 Jugar Adivina el Número</a>
     </section>
 
     <!-- CONTACTO -->
