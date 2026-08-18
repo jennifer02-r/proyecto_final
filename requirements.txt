@@ -1,1 +1,5 @@
 gunicorn app:app
+Plaintext
+Flask
+gunicorn
+psycopg2-binary
