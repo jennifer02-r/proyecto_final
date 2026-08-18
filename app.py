@@ -10,7 +10,9 @@ def home():
 def juego():
     return render_template('numero-secreto.html')
 
-
+@app.route('/integrante1')
+def integrante1():
+    return render_template('integrante1.html')
 
 if __name__ == '__main__':
     app.run()
