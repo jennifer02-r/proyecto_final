@@ -4,8 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    # Esto buscará tu página principal (puedes adaptarlo o servir tu HTML)
-    return "¡Servidor Flask funcionando correctamente!"
+    return render_template('PAGINA.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
