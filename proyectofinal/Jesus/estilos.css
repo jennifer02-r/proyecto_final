@@ -1,0 +1,584 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #07111f;
+    color: white;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   MENÚ
+========================= */
+
+header {
+    background-color: #050b14;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #173451;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #19d9ff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #19d9ff;
+}
+
+
+/* =========================
+   SECCIÓN PRINCIPAL
+========================= */
+
+.hero {
+    width: 90%;
+    max-width: 1150px;
+    min-height: 600px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.saludo {
+    color: #19d9ff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    color: #a8b8ca;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #c4d0dc;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   FOTO
+========================= */
+
+.foto-container {
+    width: 330px;
+    height: 380px;
+
+    border: 3px solid #19d9ff;
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background: #102238;
+
+    box-shadow: 0 0 30px rgba(25, 217, 255, 0.2);
+}
+
+.foto-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.boton {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background-color: #19d9ff;
+    color: #04101b;
+
+    text-decoration: none;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: white;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.seccion {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 90px 0;
+}
+
+.seccion > h2 {
+    color: #19d9ff;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   SOBRE MÍ
+========================= */
+
+.sobre-mi-contenido {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+.informacion,
+.datos {
+    background-color: #0d1d30;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    border: 1px solid #193954;
+}
+
+.informacion h3,
+.datos h3 {
+    color: #19d9ff;
+    margin-bottom: 15px;
+}
+
+.informacion p,
+.datos p {
+    color: #becbd7;
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   PROYECTOS
+========================= */
+
+.descripcion {
+    color: #b9c6d4;
+    margin-bottom: 30px;
+}
+
+.proyecto-card {
+    background: linear-gradient(
+        135deg,
+        #0d2138,
+        #0b1728
+    );
+
+    border: 1px solid #1b4968;
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.proyecto-info {
+    max-width: 650px;
+}
+
+.proyecto-info h3 {
+    font-size: 28px;
+    margin: 12px 0;
+}
+
+.proyecto-info p {
+    color: #becbd7;
+    margin-bottom: 25px;
+}
+
+.etiqueta {
+    color: #07111f;
+    background-color: #19d9ff;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.proyecto-icono {
+    font-size: 100px;
+}
+
+
+/* =========================
+   JUEGO
+========================= */
+
+.juego-seccion {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 70px 0;
+}
+
+.juego {
+    min-height: 500px;
+
+    padding: 50px;
+
+    border-radius: 25px;
+
+    background:
+        radial-gradient(
+            circle at right,
+            #164c72,
+            #0a1728 55%
+        );
+
+    border: 1px solid #1b587b;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    overflow: hidden;
+}
+
+.juego-texto {
+    max-width: 600px;
+}
+
+.juego-pequeno {
+    color: #19d9ff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.juego h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin: 10px 0 20px;
+}
+
+.juego-texto > p {
+    color: #c2d0dd;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.entrada {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.entrada input {
+    width: 180px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    font-size: 18px;
+
+    outline: none;
+}
+
+.entrada button {
+    padding: 14px 25px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #19d9ff;
+
+    color: #03101a;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.entrada button:hover {
+    background-color: white;
+}
+
+.mensaje {
+    margin-top: 20px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+#intentos {
+    margin-top: 5px;
+}
+
+.boton-nuevo {
+    margin-top: 20px;
+
+    padding: 11px 20px;
+
+    background-color: transparent;
+
+    border: 1px solid #19d9ff;
+
+    color: #19d9ff;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+.boton-nuevo:hover {
+    background-color: #19d9ff;
+    color: #07111f;
+}
+
+
+/* =========================
+   PARTE VISUAL DEL JUEGO
+========================= */
+
+.juego-imagen {
+    width: 300px;
+    height: 300px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.numero-grande {
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background-color: #19d9ff;
+
+    color: #07111f;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 100px;
+    font-weight: bold;
+
+    box-shadow:
+        0 0 30px rgba(25, 217, 255, 0.4);
+}
+
+.decoracion {
+    position: absolute;
+
+    right: 0;
+    bottom: 10px;
+
+    font-size: 70px;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto {
+    text-align: center;
+}
+
+.contacto > h2 {
+    margin-bottom: 10px;
+}
+
+.redes {
+    margin-top: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.redes a {
+    color: #19d9ff;
+
+    text-decoration: none;
+
+    border: 1px solid #19d9ff;
+
+    padding: 10px 25px;
+
+    border-radius: 7px;
+}
+
+.redes a:hover {
+    background-color: #19d9ff;
+    color: #07111f;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    background-color: #050b14;
+
+    color: #8ea0b2;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .foto-container {
+        width: 280px;
+        height: 320px;
+    }
+
+    .sobre-mi-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .proyecto-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .juego {
+        flex-direction: column;
+        text-align: center;
+        padding: 35px 20px;
+    }
+
+    .juego h2 {
+        font-size: 38px;
+    }
+
+    .entrada {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+}

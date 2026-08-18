@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Personal - Jesus Maria Alfonseca Duverge</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --accent-color: #3b82f6;
+            --accent-hover: #2563eb;
+            --danger-color: #ef4444;
+            --success-color: #22c55e;
+            --border-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* NUEVO ESTILO DE MENÚ DE NAVEGACIÓN */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(30, 41, 59, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .navbar {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            letter-spacing: 0.5px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .navbar a:hover {
+            color: var(--accent-color);
+        }
+
+        /* SECCIONES GENERALES */
+        .seccion, .hero {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            min-height: 80vh;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            margin: 0.5rem 0;
+            color: #f1f5f9;
+        }
+
+        .hero-text h2 {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .hero-text p {
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+        }
+
+        .foto-container img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .boton:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* SOBRE MÍ */
+        .sobre-mi-contenido {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .informacion, .datos {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .informacion h3, .datos h3 {
+            margin-bottom: 1rem;
+            color: #f1f5f9;
+        }
+
+        .datos p {
+            margin-bottom: 0.75rem;
+        }
+
+        /* INTEGRACIÓN DEL JUEGO */
+        .juego-seccion {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 2rem;
+        }
+
+        .game-container {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .game-container h2 {
+            margin-bottom: 0.5rem;
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+
+        p.instructions {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        input[type="number"] {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border-color);
+            background-color: #0f172a;
+            color: var(--text-color);
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input[type="number"]:focus {
+            border-color: var(--accent-color);
+        }
+
+        .game-container button {
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.5rem;
+            border: none;
+            background-color: var(--accent-color);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .game-container button:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .game-container button:disabled {
+            background-color: #475569;
+            cursor: not-allowed;
+        }
+
+        .status-panel {
+            margin: 1.25rem 0;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px dashed var(--border-color);
+        }
+
+        .attempts-counter {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            margin-bottom: 1.25rem;
+        }
+
+        .attempts-counter span {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        #btn-reiniciar {
+            width: 100%;
+            background-color: #475569;
+            display: none;
+            margin-top: 0.5rem;
+        }
+
+        #btn-reiniciar:hover {
+            background-color: #64748b;
+        }
+
+        .game-container.success {
+            border-color: var(--success-color);
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
+        }
+
+        .game-container.error {
+            border-color: var(--danger-color);
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);
+        }
+
+        /* CONTACTO Y FOOTER */
+        .contacto {
+            text-align: center;
+        }
+
+        .redes {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .redes a {
+            padding: 0.5rem 1rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 0.5rem;
+            transition: border-color 0.2s;
+        }
+
+        .redes a:hover {
+            border-color: var(--accent-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero, .sobre-mi-contenido {
+                flex-direction: column;
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                Mi Portafolio
+            </div>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#juego">Juego</a></li>
+                <li>
+                    <a href="https://sites.google.com/view/techforge-blog?pli=1" target="_blank">
+                        Portafolio
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- INICIO -->
+    <section id="inicio" class="hero">
+        <div class="hero-text">
+            <p class="saludo">¡Hola! Mi nombre es</p>
+            <h1>Jesus Maria Alfonseca Duverge</h1>
+            <h2>Estudiante de Desarrollo Web</h2>
+            <p>
+                Bienvenido a mi portafolio personal.
+                Aquí podrás conocer un poco sobre mí
+                y algunos de los proyectos que he realizado.
+            </p>
+            <a href="#proyectos" class="boton">
+                Ver mis proyectos
+            </a>
+        </div>
+
+        <div class="foto-container">
+            <img src="img/foto.jpg" alt="Fotografía personal">
+        </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="seccion">
+        <h2>Sobre mí</h2>
+        <div class="sobre-mi-contenido">
+            <div class="informacion">
+                <h3>Información personal</h3>
+                <p>
+                    Soy estudiante interesado en el desarrollo web
+                    y la tecnología. Me gusta aprender nuevas
+                    herramientas y crear proyectos que me permitan
+                    desarrollar mis habilidades.
+                </p>
+                <p>
+                    Durante mi formación he trabajado con tecnologías
+                    como HTML, CSS y JavaScript.
+                </p>
+            </div>
+
+            <div class="datos">
+                <h3>Mis datos</h3>
+                <p><strong>Nombre:</strong> Jesus Maria Alfonseca Duverge</p>
+                <p><strong>Matrícula:</strong> TU-MATRICULA</p>
+                <p><strong>Área:</strong> Desarrollo Web</p>
+                <p><strong>Habilidades:</strong> HTML, CSS, JavaScript</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="seccion">
+        <h2>Mis Proyectos</h2>
+        <p style="color: #94a3b8; margin-top: 0.5rem;">
+            Estos son algunos de los proyectos que he realizado durante mi formación.
+        </p>
+    </section>
+
+    <!-- JUEGO INTEGRADO -->
+    <section id="juego" class="juego-seccion">
+        <div class="game-container" id="gameContainer">
+            <h2>Adivina el Número</h2>
+            <p class="instructions">Estoy pensando en un número del <strong>1 al 10</strong>. ¡Intenta adivinarlo!</p>
+
+            <div class="attempts-counter">
+                Intentos restantes: <span id="intentosRestantes">3</span>
+            </div>
+
+            <div class="input-group" id="inputGroup">
+                <input type="number" id="inputNumero" min="1" max="10" placeholder="Ej. 5">
+                <button id="btnAdivinar" onclick="verificarAdivinanza()">Adivinar</button>
+            </div>
+
+            <div class="status-panel" id="mensajeEstado">¡Comienza el juego!</div>
+
+            <button id="btn-reiniciar" onclick="reiniciarJuego()">Reiniciar Partida</button>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="seccion contacto">
+        <h2>Contacto</h2>
+        <p style="color: #94a3b8; margin-top: 0.5rem;">
+            Puedes encontrarme en mis redes profesionales.
+        </p>
+        <div class="redes">
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>© 2026 Jesus Maria Alfonseca Duverge - Portafolio Personal</p>
+    </footer>
+
+    <!-- SCRIPT DEL JUEGO -->
+    <script>
+        let numeroSecreto = Math.floor(Math.random() * 10) + 1;
+        let intentosRestantes = 3;
+        let juegoTerminado = false;
+
+        const inputNumero = document.getElementById('inputNumero');
+        const mensajeEstado = document.getElementById('mensajeEstado');
+        const spanIntentos = document.getElementById('intentosRestantes');
+        const btnAdivinar = document.getElementById('btnAdivinar');
+        const btnReiniciar = document.getElementById('btn-reiniciar');
+        const gameContainer = document.getElementById('gameContainer');
+
+        inputNumero.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter' && !juegoTerminado) {
+                verificarAdivinanza();
+            }
+        });
+
+        function verificarAdivinanza() {
+            const valorInput = inputNumero.value.trim();
+
+            if (valorInput === '') {
+                mensajeEstado.textContent = '⚠️ Por favor, introduce un número.';
+                mensajeEstado.style.color = '#facc15';
+                return;
+            }
+
+            const numeroUsuario = parseInt(valorInput, 10);
+
+            if (numeroUsuario < 1 || numeroUsuario > 10) {
+                mensajeEstado.textContent = '⚠️ El número debe estar entre 1 y 10.';
+                mensajeEstado.style.color = '#facc15';
+                inputNumero.value = '';
+                return;
+            }
+
+            intentosRestantes--;
+            spanIntentos.textContent = intentosRestantes;
+            inputNumero.value = '';
+
+            if (numeroUsuario === numeroSecreto) {
+                terminarJuego(true, `🎉 ¡Felicidades! Has adivinado el número secreto (${numeroSecreto}).`);
+            } else if (intentosRestantes === 0) {
+                terminarJuego(false, `❌ ¡Has perdido! El número secreto era: ${numeroSecreto}.`);
+            } else {
+                if (numeroUsuario < numeroSecreto) {
+                    mensajeEstado.textContent = `📈 El número secreto es MAYOR que ${numeroUsuario}.`;
+                } else {
+                    mensajeEstado.textContent = `📉 El número secreto es MENOR que ${numeroUsuario}.`;
+                }
+                mensajeEstado.style.color = '#f8fafc';
+                inputNumero.focus();
+            }
+        }
+
+        function terminarJuego(ganado, mensaje) {
+            juegoTerminado = true;
+            mensajeEstado.textContent = mensaje;
+            mensajeEstado.style.color = ganado ? 'var(--success-color)' : 'var(--danger-color)';
+            
+            gameContainer.classList.add(ganado ? 'success' : 'error');
+
+            inputNumero.disabled = true;
+            btnAdivinar.disabled = true;
+            btnReiniciar.style.display = 'block';
+            btnReiniciar.focus();
+        }
+
+        function reiniciarJuego() {
+            numeroSecreto = Math.floor(Math.random() * 10) + 1;
+            intentosRestantes = 3;
+            juegoTerminado = false;
+
+            spanIntentos.textContent = intentosRestantes;
+            mensajeEstado.textContent = '¡Nueva partida iniciada! Suerte.';
+            mensajeEstado.style.color = 'var(--text-color)';
+
+            inputNumero.disabled = false;
+            btnAdivinar.disabled = false;
+            inputNumero.value = '';
+            
+            btnReiniciar.style.display = 'none';
+            gameContainer.classList.remove('success', 'error');
+            
+            inputNumero.focus();
+        }
+    </script>
+</body>
+</html>
