@@ -1,94 +1,274 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de mí</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos2.css') }}">
+
+    <title>Acerca de mi</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/estilos2.css') }}">
+    <!-- Iconos opcionales de FontAwesome para el diseño -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<cuerpo>
+
+<body>
+
     <!-- =====================================================
          MENÚ DE NAVEGACIÓN
-         ====================================================== -->
-    <encabezamiento>
-        <navegación clase="barra de navegación">
-            <h2 clase="logo">
+         ===================================================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <h2 class="logo">
                 Jennifer Eunice Yand Destine
             </h2>
-            <ul clase="menú">
+
+            <ul class="menu">
+
                 <li><a href="#inicio">Inicio</a> </li>
                 <li><a href="#sobre-mi">Sobre mí</a> </li>
                 <li><a href="#datos">Datos</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-        </navegación>
-    </encabezamiento>
+
+        </nav>
+    </header>
+
     <!--SECCIÓN INICIO -->
-    <sección identificación="inicio"clase="inicio">
-        <div clase="contenido-inicio">
-            <div clase="texto-inicio">
-                <pag clase="saludo">¡HOLA!, Bienvenido a mi perfil.</pag>
-                <h1><durar>Jennifer Eunice Yand Destine</durar></h1>
+
+    <section id="inicio" class="inicio">
+
+        <div class="contenido-inicio">
+            <div class="texto-inicio">
+                <p class="saludo">¡HOLA!, Bienvenido a mi perfil</p>
+                <h1><span>Jennifer Eunice Yand Destine</span></h1>
+
                 <h3>Estudiante de Ingeniería en Sistemas</h3>
-                <pag>
+                <p>
                     En este sitio web presento información sobre mí,
                     mis habilidades y algunos de los proyectos que
-                    lo realizó durante mi formación académica.
-                </pag>
-                <a href="#sobre-mi"clase="botón">Conocer más</a>
+                    he realizado durante mi formación académica.
+                </p>
+                <a href="#sobre-mi" class="boton">Conocer más</a>
             </div>
-            <div clase="foto">
-              <img src="{{ url_for('static', filename='imagenes/imagen de Jennifer.jpg') }}" alt="Fotografía personal">
+
+            <div class="foto">
+
+                <img src="Imagen de Jennifer.jpg"alt="Fotografía personal">
             </div>
+
         </div>
-    </sección>
+
+    </section>
+
+
     <!-- SECCIÓN SOBRE MÍ -->
-    <sección identificación="sobre-mi"clase="acerca de">
-        <div clase="recipiente">
-            <h2>Información Personal y Profesional</h2>
-            <sección identificación="datos"clase="datos">
-        </divclase="contenedor"> 
+
+    <section id="sobre-mi" class="about">
+        <div class="container">
+
+            <h2> Información Personal y Profesional</h2>
+            <section id="datos" class="datos">
+        </div class="container"> 
+
         <h1>Datos Personales</h1>
-            <pag clase="nombre">Nombre:<durar>Jennifer Eunice Yand Destine</durar></pag>
-            <pag clase="matrícula">Matrícula:<durar>24-SISN-009</durar></pag>
-            <pag clase="carrera">Carrera:<durar>Ingeniería en Sistemas</durar></pag>
-            <pag clase="universidad">Universidad:<durar>Universidad Dominicana O&M</durar></pag>
+
+            <p class="nombre">Nombre: <span>Jennifer Eunice Yand Destine</span></p>
+            <p class="matricula">Matrícula: <span>24-SISN-009</span></p>
+            <p class="carrera">Carrera: <span>Ingeniería en Sistemas</span></p>
+            <p class="universidad">Universidad: <span>Universidad Dominicana O&M</span></p>
             
             </div>
-            <div clase="sobre-la-cuadrícula">
-                <div clase="Tarjeta de información">
-                    <i clase="fas fa-usuario-graduado"></i>
+
+            <div class="about-grid">
+
+                <div class="about-card">
+                    <i class="fas fa-user-graduate"></i>
                     <h3>
                         Perfil Académico
                     </h3>
-                    <pag>
-                        Apasionada por la tecnología, las redes y el desarrollo.
+                    <p>
+                        Apasionada por la tecnología, las redes y el desarrollo
                         de sistemas. Con enfoque en crear soluciones eficientes
                         y escalables.
-                    </pag>
+                    </p>
                 </div>
-                <div clase="Tarjeta de información">
-                    <i clase="código para portátil fas fa"></i>
+                <div class="about-card">
+
+                    <i class="fas fa-laptop-code"></i>
+
                     <h3>
                         Habilidades
                     </h3>
-                    <pag>
+
+                    <p>
                         Manejo de redes, bases de datos, maquetación web con
                         HTML/CSS, JavaScript y control de versiones mediante
                         Git y GitHub.
-                    </pag>
+                    </p>
+
                 </div>
-                <div clase="Tarjeta de información">
-                    <i clase="fa fa-diana"></i>
+
+
+                <div class="about-card">
+
+                    <i class="fas fa-bullseye"></i>
                     <h3>
                         Objetivos
                     </h3>
-                    <pag>
-                        Continuar ampliando mis conocimientos en el área.
+                    <p>
+                        Continuar expandiendo mis conocimientos en el área
                         de ingeniería y tecnología, participando en proyectos
-                        innovador de alto impacto.
-                    </pag>
+                        innovadores de alto impacto.
+                    </p>
                 </div>
             </div>
         </div>
+
+    </section>
+
+
+    <!-- SECCIÓN PROYECTOS -->
+
+    <section id="proyectos" class="projects">
+
+        <div class="container">
+
+            <h2>
+                Mis Proyectos
+            </h2>
+
+            <div class="projects-grid">
+
+
+                <!-- Proyecto del Blog -->
+
+                <div class="project-card">
+
+                    <div class="project-info">
+
+                        <h3>
+                            Blog
+                        </h3>
+
+                        <p>
+                            Sitio web tipo blog desarrollado previamente como
+                            evaluación parcial, estructurado con contenidos
+                            dinámicos y diseño personalizado.
+                        </p>
+
+                        <a href="https://sites.google.com/view/techcore-redes-y-sistemas/inicio"
+                            target="_blank"
+                            class="btn-project">
+
+                            Visitar Blog
+
+                            <i class="fas fa-external-link-alt"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Proyecto Adicional -->
+
+                <div class="project-card">
+
+                    <div class="project-info">
+
+                        <h3>
+                            Número magico
+                        </h3>
+
+                        <p>
+                            Enlace directo a un juego creado junto a mi equipo,
+                            diseñado para ser jugado en línea.
+                        </p>
+
+                        <a href="https://proyecto-final-1-z1xp.onrender.com/juego"
+                            target="_blank"
+                            class="btn-project">
+
+                            Acceso directo
+
+                            <i class="fab fa-github"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--  SECCIÓN CONTACTO / FOOTER -->
+
+    <footer id="contacto" class="footer">
+
+        <div class="container">
+
+            <h2>
+                Contacto
+            </h2>
+
+            <p>
+                ¿Interesado en colaborar o saber más sobre mí?
+                ¡Contáctame!
+            </p>
+
+
+            <div class="social-links">
+
+                <a href="mailto:tu-jenniferyand2125@gmail.com">
+
+                    <i class="fas fa-envelope"></i>
+
+                </a>
+
+
+                <a href="https://linkedin.com"
+                    target="_blank">
+
+                    <i class="fab fa-linkedin"></i>
+
+                </a>
+
+
+                <a href="https://github.com"
+                    target="_blank">
+
+                    <i class="fab fa-github"></i>
+
+                </a>
+
+            </div>
+
+
+            <p class="copyright">
+
+                &copy; 2026 Jennifer Eunice Yand Destine.
+                Todos los derechos reservados.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
