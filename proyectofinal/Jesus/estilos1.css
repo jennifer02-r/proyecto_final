@@ -1,0 +1,103 @@
+*{
+    margen: 0;
+    relleno: 0;
+    tamaño de la caja:caja de borde;
+    comportamiento de desplazamiento:liso;
+}
+cuerpo{
+    familia de fuentes:Arial,sans-serif;
+    color de fondo: #f4f4f4;
+    color: #222;
+}
+/* MENÚ */
+encabezamiento{
+    ancho: 100%;
+    color de fondo: #111827;
+    posición:fijado;
+    arriba: 0;
+    izquierda: 0;
+    índice z: 1000;
+}
+.barra de navegación{
+    ancho: 90%;
+    ancho máximo: 1200píxeles;
+    margen:auto;
+    altura: 70píxeles;
+    mostrar:doblar;
+    justificar-contenido:espacio entre;
+    alinear elementos:centro;
+}
+.logo{
+    color:blanco;
+    tamaño de fuente: 25píxeles;
+}
+.menú{
+    mostrar:doblar;
+    estilo lista:ninguno;
+    brecha: 30píxeles;
+}
+.menú a{
+    color:blanco;
+    decoración de texto:ninguno;
+    tamaño de fuente: 16píxeles;
+    transición: 0,3s;
+}
+.menú a:flotar{
+    color: #38bdf8;
+}
+/* INICIO */
+.inicio{
+    altura mínima: 100vh;
+    fondo: gradiente lineal(135grados, #111827, #1e3a8a);
+    mostrar:doblar;
+    alinear elementos:centro;
+    relleno: 100píxeles 10% 50píxeles;
+}
+.contenido-inicio{
+    ancho: 100%;
+    ancho máximo: 1200píxeles;
+    margen:auto;
+    mostrar:doblar;
+    justificar-contenido:espacio entre;
+    alinear elementos:centro;
+    brecha: 50píxeles;
+}
+.texto-inicio{
+    ancho máximo: 650píxeles;
+    color:blanco;
+}
+.saludo{
+    color: #38bdf8;
+    peso de fuente:atrevido;
+    margen inferior: 15píxeles;
+}
+.texto-inicio h1{
+    tamaño de fuente: 50píxeles;
+    margen inferior: 15píxeles;
+}
+.texto-inicio h1 durar{
+    color: #38bdf8;
+}
+.texto-inicio h3{
+    tamaño de fuente: 25píxeles;
+    margen inferior: 20píxeles;
+}
+.texto-inicio pag{
+    altura de línea: 1.7;
+    tamaño de fuente: 17píxeles;
+}
+.botón{
+    mostrar:bloque en línea;
+    margen superior: 25píxeles;
+    relleno: 13píxeles 25píxeles;
+    color de fondo: #38bdf8;
+    color: #111827;
+    decoración de texto:ninguno;
+    peso de fuente:atrevido;
+    radio de borde: 5píxeles;
+    transición: 0,3s;
+}
+.botón:flotar{
+    color de fondo:blanco;
+    transformar: traducirY(-3píxeles);
+}
