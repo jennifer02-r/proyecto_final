@@ -4,10 +4,10 @@ Html
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Personal</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilis4.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Personal</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -48,7 +48,7 @@ Html
     <div class="right-panel-inner">
       <div class="logo-container">
         <!-- Reemplaza "logo.png" por la ruta de tu imagen de logo -->
-         <img src="{{ url_for('static', filename='imagenes/integrante4.jpeg') }}" alt="Fotografía personal">
+        <img src="logo.png" alt="Logo" class="site-logo">
       </div>
       <div class="hex-pattern"></div>
       <div class="accent-stripes right-stripes">
@@ -66,12 +66,12 @@ Html
     <section id="inicio" class="section">
       <div class="profile-header">
         <div class="user-info">
-          <h1 class="user-name">[Luis Felipe Celeste Quesada]</h1>
-          <p class="user-id">Matrícula: [27-SISN-02-006]</p>
+          <h1 class="user-name">[Luis Felipe Celeste Quezada]</h1>
+          <p class="user-id">Matrícula: [24-SISN-02-018]</p>
         </div>
         <div class="profile-frame">
           <!-- Reemplaza "foto.jpg" por tu fotografía personal -->
-         <img src="{{ url_for('static', filename='imagenes/integrante4.jpeg') }}" alt="Fotografía personal">
+           <img src="{{ url_for('static', filename='imagenes/integrante4.jpeg') }}" alt="Fotografía personal">
         </div>
       </div>
     </section>
@@ -80,7 +80,7 @@ Html
     <section id="sobre-mi" class="section">
       <h2 class="section-title">Sobre Mí</h2>
       <div class="info-card">
-        <p>[AQUÍ VA TU INFORMACIÓN PERSONAL O PROFESIONAL]</p>
+        <p>[Joven de 19 años, estudiante de Ingeniería en sistemas en la oym,maestro de informática]</p>
       </div>
     </section>
 
@@ -106,7 +106,7 @@ Html
           <div class="card-inner">
             <h3>Juego: Número Secreto</h3>
             <p>[AQUÍ UNA BREVE DESCRIPCIÓN DE TU JUEGO]</p>
-            <a href="https://TU-ENLACE-DEL-JUEGO.com" target="_blank" class="cyber-btn">JUGAR AHÓRA</a>
+             <a href="/juego" class="boton">🎮 Jugar Ahora</a>
           </div>
           <div class="card-accents">
             <span></span><span></span><span></span>
@@ -129,7 +129,7 @@ Html
 
   <!-- Pie de página -->
   <footer class="site-footer">
-    <p>Desarrollado por [Luis Felipe Celeste Quesada]</p>
+    <p>Desarrollado por [Luis Felipe Celeste Quezada]</p>
   </footer>
 
   <script src="script.js"></script>
