@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio Personal</title>
-    <!-- Asegúrate de usar la ruta correcta a tu archivo CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='estilos1.css') }}">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <!-- Menú de navegación -->
     <header>
         <nav class="navbar">
-            <h2 class="logo">Kenneth Xavier Hernández Pierre</h2>
+            <h2 class="logo">Kenneth Xavier Hernandez Pierre</h2>
+
             <ul class="menu">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
@@ -21,73 +23,212 @@
         </nav>
     </header>
 
+
     <!-- Sección Inicio -->
     <section id="inicio" class="inicio">
+
         <div class="contenido-inicio">
+
             <div class="texto-inicio">
                 <p class="saludo">HOLA, BIENVENIDO A MI PORTAFOLIO</p>
-                <h1>Hola, soy <span>Kenneth Xavier Hernández Pierre</span></h1>
+
+                <h1>Hola, soy <span>Kenneth Xavier Hernandez Pierre</span></h1>
+
                 <h3>Estudiante de Ingeniería en Sistemas</h3>
+
                 <p>
-                    En este sitio web presento información sobre mí, 
-                    mis habilidades y algunos de los proyectos que 
-                    realicé durante mi formación académica.
+                    En este sitio web presento información sobre mí,
+                    mis habilidades y algunos de los proyectos que
+                    he realizado durante mi formación académica.
                 </p>
+
                 <a href="#sobre-mi" class="boton">Conocer más</a>
             </div>
+
             <div class="foto">
-                <img src="{{ url_for('static', filename='imagenes/integrante3.jpeg') }}" alt="Fotografía personal">
+                <img src="mi foto2.0.jpeg" alt="Fotografía personal">
             </div>
+
         </div>
+
     </section>
+
 
     <!-- Sección Sobre mí -->
     <section id="sobre-mi" class="seccion">
+
         <h2 class="titulo">Sobre mí</h2>
+
         <div class="sobre-mi">
+
             <div class="informacion">
+
                 <h3>Información personal</h3>
+
                 <p>
-                    Mi nombre es <strong>Kenneth Xavier Hernández Pierre</strong>. 
-                    Soy estudiante de Ingeniería en Sistemas y Computación 
-                    y actualmente me encuentro desarrollando mis conocimientos 
+                    Mi nombre es <strong>Kenneth Xavier Hernandez Pierre</strong>.
+                    Soy estudiante de Ingeniería en Sistemas y Computación
+                    y actualmente me encuentro desarrollando mis conocimientos
                     en el área de tecnología.
                 </p>
+
                 <p>
-                    Me interesa aprender sobre programación, desarrollo web, 
-                    bases de datos, redes y diferentes herramientas tecnológicas. 
-                    Mi objetivo es continuar desarrollando mis habilidades 
+                    Me interesa aprender sobre programación, desarrollo web,
+                    bases de datos, redes y diferentes herramientas tecnológicas.
+                    Mi objetivo es continuar desarrollando mis habilidades
                     para poder desempeñarme profesionalmente en el área de sistemas.
                 </p>
+
             </div>
+
+
             <div class="datos">
+
                 <h3>Mis datos</h3>
-                <p><strong>Nombre:</strong> Kenneth Xavier Hernández Pierre</p>
+
+                <p><strong>Nombre:</strong> Kenneth Xavier Hernandez Pierre</p>
+
                 <p><strong>Matrícula:</strong> 24-SISN2-004</p>
+
                 <p><strong>Carrera:</strong> Ingeniería en Sistemas y Computación</p>
+
                 <p><strong>Universidad:</strong> Universidad Dominicana O&M</p>
+
                 <p><strong>Área:</strong> Tecnología y Desarrollo Web</p>
+
             </div>
+
         </div>
+
     </section>
+
 
     <!-- Sección Habilidades -->
     <section class="habilidades">
+
         <h2 class="titulo">Mis habilidades</h2>
+
         <div class="contenedor-habilidades">
-            <div class="habilidad-card">
+
+            <div class="habilidad">
                 <h3>HTML</h3>
-                <p>Creación de páginas web utilizando la estructura y elementos principales de HTML.</p>
+                <p>
+                    Creación de páginas web utilizando la estructura
+                    y elementos principales de HTML.
+                </p>
             </div>
-            <div class="habilidad-card">
+
+            <div class="habilidad">
                 <h3>CSS</h3>
-                <p>Diseño y personalización de páginas web utilizando diferentes estilos y propiedades CSS.</p>
+                <p>
+                    Diseño y personalización de páginas web utilizando
+                    diferentes estilos y propiedades CSS.
+                </p>
             </div>
-            <div class="habilidad-card">
+
+            <div class="habilidad">
                 <h3>Programación</h3>
-                <p>Conocimientos básicos de programación y resolución de problemas.</p>
+                <p>
+                    Conocimientos básicos de programación y resolución
+                    de problemas mediante código.
+                </p>
             </div>
+
+            <div class="habilidad">
+                <h3>Bases de datos</h3>
+                <p>
+                    Conocimientos básicos sobre bases de datos,
+                    tablas y manejo de información.
+                </p>
+            </div>
+
         </div>
+
     </section>
+
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="seccion">
+
+        <h2 class="titulo">Mis Proyectos</h2>
+
+        <div class="proyectos">
+
+            <div class="proyecto">
+
+                <h3>Enlace a mi Blog</h3>
+
+                <p>
+                    Blog desarrollado anteriormente como parte del examen
+                    parcial. Desde este apartado se puede acceder directamente
+                    al proyecto.
+                </p>
+
+                <a href="https://sites.google.com/view/el-mundo-de-la-inteligencia/ia" class="boton-proyecto">
+                    Ver Blog
+                </a>
+
+            </div>
+
+
+            <div class="proyecto">
+
+                <h3>Numero magico</h3>
+
+                <p>
+                    Otro de los proyectos realizados durante mi formación
+                    académica y práctica en el área de sistemas.
+                </p>
+
+                <a href="https://proyecto-final-1-z1xp.onrender.com/juego" class="boton-proyecto">Jugar</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contacto">
+
+        <h2 class="titulo">Contacto</h2>
+
+        <p>
+            Si deseas comunicarte conmigo puedes hacerlo mediante
+            los siguientes medios.
+        </p>
+
+        <div class="datos-contacto">
+
+            <p>
+                <strong>Correo:</strong>
+                hkennethxavier@gmail.com
+            </p>
+
+            <p>
+                <strong>Teléfono:</strong>
+                809-426-7208
+            </p>
+
+            <p>
+                <strong>Ubicación:</strong>
+                República Dominicana
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Pie de página -->
+    <footer>
+
+        <p>
+            © 2026 KennetXavier - Portafolio Personal
+        </p>
+
+    </footer>
+
 </body>
 </html>
