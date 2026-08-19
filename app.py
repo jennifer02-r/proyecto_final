@@ -14,6 +14,9 @@ def juego():
 def integrante1():
     return render_template('PAGINA.html')
 
+@app.route('/integrante3')
+def integrante3():
+    return render_template('pagina3.html')
 
 
 if __name__ == '__main__':

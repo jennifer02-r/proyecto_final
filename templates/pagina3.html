@@ -1,137 +1,91 @@
-Html
-
-
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio Personal</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- Botón de apertura del menú lateral izquierdo -->
-  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-    <div class="bars">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </button>
-
-  <!-- Menú desplegable lateral izquierdo con diseño angular -->
-  <aside class="sidebar-left" id="sidebar">
-    <div class="sidebar-content">
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
-          <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
-          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-          <li><a href="#contacto" class="nav-link">Contacto</a></li>
-        </ul>
-      </nav>
-      <!-- Detalles decorativos rojos (muescas) -->
-      <div class="accent-stripes">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </aside>
-
-  <!-- Capa oscura de fondo al abrir el menú -->
-  <div class="overlay" id="overlay"></div>
-
-  <!-- Panel lateral derecho fijo (con Logo y formas angulares) -->
-  <aside class="sidebar-right">
-    <div class="right-panel-inner">
-      <div class="logo-container">
-        <!-- Reemplaza "logo.png" por la ruta de tu imagen de logo -->
-        <img src="logo.png" alt="Logo" class="site-logo">
-      </div>
-      <div class="hex-pattern"></div>
-      <div class="accent-stripes right-stripes">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </aside>
-
-  <!-- Contenido principal con fondo blanco -->
-  <main class="main-content">
-    
+<html idioma="es">
+<cabeza>
+    <meta conjunto de caracteres="UTF-8">
+    <meta nombre="ventana gráfica"contenido="ancho=ancho-del-dispositivo, escala-inicial=1.0">
+    <título>Mi Portafolio Personal</título>
+    <enlace rel="hoja de estilo"href="estilo.css">
+</cabeza>
+<cuerpo>
+    <!-- Menú de navegación -->
+    <encabezamiento>
+        <navegación clase="barra de navegación">
+            <h2 clase="logo">Kenneth Xavier Hernández Pierre</h2>
+            <ul clase="menú">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </navegación>
+    </encabezamiento>
     <!-- Sección Inicio -->
-    <section id="inicio" class="section">
-      <div class="profile-header">
-        <div class="user-info">
-          <h1 class="user-name">[TU NOMBRE COMPLETO AQUÍ]</h1>
-          <p class="user-id">Matrícula: [TU MATRÍCULA AQUÍ]</p>
+    <sección identificación="inicio"clase="inicio">
+        <div clase="contenido-inicio">
+            <div clase="texto-inicio">
+                <pag clase="saludo">HOLA, BIENVENIDO A MI PORTAFOLIO</pag>
+                <h1>Hola, soy<durar>Kenneth Xavier Hernández Pierre</durar></h1>
+                <h3>Estudiante de Ingeniería en Sistemas</h3>
+                <pag>
+                    En este sitio web presento información sobre mí,
+                    mis habilidades y algunos de los proyectos que
+                    lo realizó durante mi formación académica.
+                </pag>
+                <a href="#sobre-mi"clase="botón">Conocer más</a>
+            </div>
+            <div clase="foto">
+                <imagen src="mi foto2.0.jpeg"alt="Fotografía personal">
+            </div>
         </div>
-        <div class="profile-frame">
-          <!-- Reemplaza "foto.jpg" por tu fotografía personal -->
-          <img src="foto.jpg" alt="Fotografía Personal" class="profile-img">
+    </sección>
+    <!-- Sección Sobre mí -->
+    <sección identificación="sobre-mi"clase="sección">
+        <h2 clase="título">Sobre mí</h2>
+        <div clase="sobre-mi">
+            <div clase="información">
+                <h3>Información personal</h3>
+                <pag>
+                    Mi nombre es<fuerte>Kenneth Xavier Hernández Pierre</fuerte>.
+                    Soy estudiante de Ingeniería en Sistemas y Computación
+                    y actualmente me encuentro desarrollando mis conocimientos
+                    en el área de tecnología.
+                </pag>
+                <pag>
+                    Me interesa aprender sobre programación, desarrollo web,
+                    bases de datos, redes y diferentes herramientas tecnológicas.
+                    Mi objetivo es continuar desarrollando mis habilidades
+                    para poder desempeñarme profesionalmente en el área de sistemas.
+                </pag>
+            </div>
+            <div clase="datos">
+                <h3>Mis datos</h3>
+                <pag><fuerte>Nombre:</fuerte>Kenneth Xavier Hernández Pierre</pag>
+                <pag><fuerte>Matrícula:</fuerte>24-SISN2-004</pag>
+                <pag><fuerte>Carrera:</fuerte>Ingeniería en Sistemas y Computación</pag>
+                <pag><fuerte>Universidad:</fuerte>Universidad Dominicana O&M</pag>
+                <pag><fuerte>Área:</fuerte>Tecnología y Desarrollo Web</pag>
+            </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Sección Sobre Mí -->
-    <section id="sobre-mi" class="section">
-      <h2 class="section-title">Sobre Mí</h2>
-      <div class="info-card">
-        <p>[AQUÍ VA TU INFORMACIÓN PERSONAL O PROFESIONAL]</p>
-      </div>
-    </section>
-
-    <!-- Sección Proyectos (Redirecciones externas a tu Blog y Juego) -->
-    <section id="proyectos" class="section">
-      <h2 class="section-title">Mis Proyectos</h2>
-      <div class="projects-grid">
-        
-        <!-- Tarjeta Proyecto 1: Blog -->
-        <article class="project-card">
-          <div class="card-inner">
-            <h3>Blog de Optimización</h3>
-            <p>[AQUÍ UNA BREVE DESCRIPCIÓN DE TU BLOG]</p>
-            <a href="https://TU-ENLACE-DEL-BLOG.com" target="_blank" class="cyber-btn">IR AL BLOG</a>
-          </div>
-          <div class="card-accents">
-            <span></span><span></span><span></span>
-          </div>
-        </article>
-
-        <!-- Tarjeta Proyecto 2: Juego del Número Secreto -->
-        <article class="project-card">
-          <div class="card-inner">
-            <h3>Juego: Número Secreto</h3>
-            <p>[AQUÍ UNA BREVE DESCRIPCIÓN DE TU JUEGO]</p>
-            <a href="https://TU-ENLACE-DEL-JUEGO.com" target="_blank" class="cyber-btn">JUGAR AHÓRA</a>
-          </div>
-          <div class="card-accents">
-            <span></span><span></span><span></span>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- Sección Contacto -->
-    <section id="contacto" class="section">
-      <h2 class="section-title">Contacto</h2>
-      <div class="social-links">
-        <a href="[LINK-GITHUB]" target="_blank" class="social-btn">GitHub</a>
-        <a href="[LINK-LINKEDIN]" target="_blank" class="social-btn">LinkedIn</a>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Pie de página -->
-  <footer class="site-footer">
-    <p>Desarrollado por [TU NOMBRE COMPLETO]</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+    </sección>
+    <!-- Sección Habilidades -->
+    <sección clase="habilidades">
+        <h2 clase="título">Mis habilidades</h2>
+        <div clase="contenedor-habilidades">
+            <div clase="¿">
+                <h3>HTML</h3>
+                <pag>
+                    Creación de páginas web utilizando la estructura.
+                    y elementos principales de HTML.
+                </pag>
+            </div>
+            <div clase="¿">
+                <h3>CSS</h3>
+                <pag>
+                    Diseño y personalización de páginas web utilizando
+                    Diferentes estilos y propiedades CSS.
+                </pag>
+            </div>
+            <div clase="¿">
+                <h3>Programación</h3>
+                <pag>
+                    Conocimientos básicos de programación y resolución.
