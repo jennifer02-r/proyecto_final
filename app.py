@@ -16,7 +16,7 @@ def integrante1():
 
 @app.route('/integrante2')
 def integrante2():
-    return render_template('PAGINA2.html')
+    return render_template('pagina2.html')
 
 @app.route('/integrante3')
 def integrante3():
