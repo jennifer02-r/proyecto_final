@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio del Equipo</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
     <!-- ================= HEADER ================= -->
     <header class="header">
         <nav class="navbar">
-            <div class="logo">
-                <span>&lt;/&gt;</span>
-                Nuestro Equipo
+            <div class="logo" style="display: flex; align-items: center; gap: 8px;">
+                <img src="{{ url_for('static', filename='imagenes/logo.jpeg') }}" alt="Logo de The Cyber's Goat" style="width: 35px; height: 35px; border-radius: 50%; object-fit: cover;">
+                <span>The Cyber's Goat</span>
             </div>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#equipo">Integrantes</a></li>
                 <li><a href="#proyecto">Proyecto</a></li>
-                <!-- CORREGIDO: Apunta a la ruta de Flask /juego -->
                 <li><a href="/juego">Juego</a></li>
             </ul>
         </nav>
@@ -112,19 +111,19 @@
                     </div>
                 </article>
 
-<!-- INTEGRANTE 3 -->
-<article class="member-card">
-    <div class="member-image">
-        <img src="{{ url_for('static', filename='imagenes/integrante3.jpeg') }}" alt="Fotografía de Kenneth Xavier">
-    </div>
-    <div class="member-info">
-        <span class="member-number">03</span>
-        <h3>Kenneth Xavier Hernandez Pierre</h3>
-        <p class="matricula">Matrícula: 24-SISN2-004</p>
-        <p>Estudiante apasionado por la tecnología y el desarrollo web.</p>
-        <a href="/integrante3" class="card-btn">Ver portafolio →</a>
-    </div>
-</article>
+                <!-- INTEGRANTE 3 -->
+                <article class="member-card">
+                    <div class="member-image">
+                        <img src="{{ url_for('static', filename='imagenes/integrante3.jpeg') }}" alt="Fotografía de Kenneth Xavier">
+                    </div>
+                    <div class="member-info">
+                        <span class="member-number">03</span>
+                        <h3>Kenneth Xavier Hernandez Pierre</h3>
+                        <p class="matricula">Matrícula: 24-SISN2-004</p>
+                        <p>Estudiante apasionado por la tecnología y el desarrollo web.</p>
+                        <a href="/integrante3" class="card-btn">Ver portafolio →</a>
+                    </div>
+                </article>
 
                 <!-- INTEGRANTE 4 -->
                 <article class="member-card">
@@ -168,7 +167,6 @@
                     HTML, CSS y JavaScript en el que debes
                     descubrir un número secreto entre 1 y 10.
                 </p>
-                <!-- CORREGIDO: Apunta a la ruta de Flask /juego -->
                 <a href="/juego" class="btn">
                     Jugar ahora
                 </a>
@@ -183,7 +181,7 @@
     <footer>
         <div class="footer-content">
             <h3>
-                &lt;/&gt; Nuestro Equipo
+                The Cyber's Goat
             </h3>
             <p>
                 Proyecto Final · Desarrollo Web
