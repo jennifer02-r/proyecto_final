@@ -14,5 +14,7 @@ def juego():
 def integrante1():
     return render_template('PAGINA.html')
 
+
+
 if __name__ == '__main__':
     app.run()
