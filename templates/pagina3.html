@@ -1,91 +1,93 @@
 <!DOCTYPE html>
-<html idioma="es">
-<cabeza>
-    <meta conjunto de caracteres="UTF-8">
-    <meta nombre="ventana gráfica"contenido="ancho=ancho-del-dispositivo, escala-inicial=1.0">
-    <título>Mi Portafolio Personal</título>
-    <enlace rel="hoja de estilo"href="estilo.css">
-</cabeza>
-<cuerpo>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Personal</title>
+    <!-- Asegúrate de usar la ruta correcta a tu archivo CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos1.css') }}">
+</head>
+<body>
     <!-- Menú de navegación -->
-    <encabezamiento>
-        <navegación clase="barra de navegación">
-            <h2 clase="logo">Kenneth Xavier Hernández Pierre</h2>
-            <ul clase="menú">
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Kenneth Xavier Hernández Pierre</h2>
+            <ul class="menu">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-        </navegación>
-    </encabezamiento>
+        </nav>
+    </header>
+
     <!-- Sección Inicio -->
-    <sección identificación="inicio"clase="inicio">
-        <div clase="contenido-inicio">
-            <div clase="texto-inicio">
-                <pag clase="saludo">HOLA, BIENVENIDO A MI PORTAFOLIO</pag>
-                <h1>Hola, soy<durar>Kenneth Xavier Hernández Pierre</durar></h1>
+    <section id="inicio" class="inicio">
+        <div class="contenido-inicio">
+            <div class="texto-inicio">
+                <p class="saludo">HOLA, BIENVENIDO A MI PORTAFOLIO</p>
+                <h1>Hola, soy <span>Kenneth Xavier Hernández Pierre</span></h1>
                 <h3>Estudiante de Ingeniería en Sistemas</h3>
-                <pag>
-                    En este sitio web presento información sobre mí,
-                    mis habilidades y algunos de los proyectos que
-                    lo realizó durante mi formación académica.
-                </pag>
-                <a href="#sobre-mi"clase="botón">Conocer más</a>
+                <p>
+                    En este sitio web presento información sobre mí, 
+                    mis habilidades y algunos de los proyectos que 
+                    realicé durante mi formación académica.
+                </p>
+                <a href="#sobre-mi" class="boton">Conocer más</a>
             </div>
-            <div clase="foto">
-                <imagen src="mi foto2.0.jpeg"alt="Fotografía personal">
+            <div class="foto">
+                <img src="{{ url_for('static', filename='imagenes/integrante3.jpeg') }}" alt="Fotografía personal">
             </div>
         </div>
-    </sección>
+    </section>
+
     <!-- Sección Sobre mí -->
-    <sección identificación="sobre-mi"clase="sección">
-        <h2 clase="título">Sobre mí</h2>
-        <div clase="sobre-mi">
-            <div clase="información">
+    <section id="sobre-mi" class="seccion">
+        <h2 class="titulo">Sobre mí</h2>
+        <div class="sobre-mi">
+            <div class="informacion">
                 <h3>Información personal</h3>
-                <pag>
-                    Mi nombre es<fuerte>Kenneth Xavier Hernández Pierre</fuerte>.
-                    Soy estudiante de Ingeniería en Sistemas y Computación
-                    y actualmente me encuentro desarrollando mis conocimientos
+                <p>
+                    Mi nombre es <strong>Kenneth Xavier Hernández Pierre</strong>. 
+                    Soy estudiante de Ingeniería en Sistemas y Computación 
+                    y actualmente me encuentro desarrollando mis conocimientos 
                     en el área de tecnología.
-                </pag>
-                <pag>
-                    Me interesa aprender sobre programación, desarrollo web,
-                    bases de datos, redes y diferentes herramientas tecnológicas.
-                    Mi objetivo es continuar desarrollando mis habilidades
+                </p>
+                <p>
+                    Me interesa aprender sobre programación, desarrollo web, 
+                    bases de datos, redes y diferentes herramientas tecnológicas. 
+                    Mi objetivo es continuar desarrollando mis habilidades 
                     para poder desempeñarme profesionalmente en el área de sistemas.
-                </pag>
+                </p>
             </div>
-            <div clase="datos">
+            <div class="datos">
                 <h3>Mis datos</h3>
-                <pag><fuerte>Nombre:</fuerte>Kenneth Xavier Hernández Pierre</pag>
-                <pag><fuerte>Matrícula:</fuerte>24-SISN2-004</pag>
-                <pag><fuerte>Carrera:</fuerte>Ingeniería en Sistemas y Computación</pag>
-                <pag><fuerte>Universidad:</fuerte>Universidad Dominicana O&M</pag>
-                <pag><fuerte>Área:</fuerte>Tecnología y Desarrollo Web</pag>
+                <p><strong>Nombre:</strong> Kenneth Xavier Hernández Pierre</p>
+                <p><strong>Matrícula:</strong> 24-SISN2-004</p>
+                <p><strong>Carrera:</strong> Ingeniería en Sistemas y Computación</p>
+                <p><strong>Universidad:</strong> Universidad Dominicana O&M</p>
+                <p><strong>Área:</strong> Tecnología y Desarrollo Web</p>
             </div>
         </div>
-    </sección>
+    </section>
+
     <!-- Sección Habilidades -->
-    <sección clase="habilidades">
-        <h2 clase="título">Mis habilidades</h2>
-        <div clase="contenedor-habilidades">
-            <div clase="¿">
+    <section class="habilidades">
+        <h2 class="titulo">Mis habilidades</h2>
+        <div class="contenedor-habilidades">
+            <div class="habilidad-card">
                 <h3>HTML</h3>
-                <pag>
-                    Creación de páginas web utilizando la estructura.
-                    y elementos principales de HTML.
-                </pag>
+                <p>Creación de páginas web utilizando la estructura y elementos principales de HTML.</p>
             </div>
-            <div clase="¿">
+            <div class="habilidad-card">
                 <h3>CSS</h3>
-                <pag>
-                    Diseño y personalización de páginas web utilizando
-                    Diferentes estilos y propiedades CSS.
-                </pag>
+                <p>Diseño y personalización de páginas web utilizando diferentes estilos y propiedades CSS.</p>
             </div>
-            <div clase="¿">
+            <div class="habilidad-card">
                 <h3>Programación</h3>
-                <pag>
-                    Conocimientos básicos de programación y resolución.
+                <p>Conocimientos básicos de programación y resolución de problemas.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
