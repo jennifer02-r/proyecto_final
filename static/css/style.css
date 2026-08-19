@@ -13,9 +13,9 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #07111f;
-    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #09090b;
+    color: #f4f4f5;
     line-height: 1.6;
 }
 
@@ -38,18 +38,16 @@ img {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(7, 17, 31, 0.95);
-    border-bottom: 1px solid #20334d;
-    backdrop-filter: blur(10px);
+    background: rgba(9, 9, 11, 0.9);
+    border-bottom: 1px solid #27272a;
+    backdrop-filter: blur(12px);
 }
 
 .navbar {
     width: 90%;
     max-width: 1200px;
     margin: auto;
-
     min-height: 75px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -58,27 +56,28 @@ img {
 .logo {
     font-size: 20px;
     font-weight: bold;
+    letter-spacing: 0.5px;
 }
 
 .logo span {
-    color: #00d9ff;
+    color: #c084fc;
     margin-right: 8px;
 }
 
 .nav-links {
     list-style: none;
-
     display: flex;
     gap: 30px;
 }
 
 .nav-links a {
-    color: #cbd5e1;
+    color: #a1a1aa;
     transition: 0.3s;
+    font-weight: 500;
 }
 
 .nav-links a:hover {
-    color: #00d9ff;
+    color: #c084fc;
 }
 
 
@@ -88,15 +87,12 @@ img {
 
 .hero {
     min-height: 90vh;
-
     width: 90%;
     max-width: 1200px;
     margin: auto;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     position: relative;
 }
 
@@ -105,7 +101,7 @@ img {
 }
 
 .small-title {
-    color: #00d9ff;
+    color: #c084fc;
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 4px;
@@ -113,18 +109,18 @@ img {
 }
 
 .hero h1 {
-    font-size: clamp(50px, 8vw, 100px);
-    line-height: 0.95;
-    margin-bottom: 30px;
+    font-size: clamp(45px, 7vw, 90px);
+    line-height: 1;
+    margin-bottom: 25px;
 }
 
 .hero h1 span {
-    color: #00d9ff;
+    color: #c084fc;
 }
 
 .hero-description {
     max-width: 600px;
-    color: #a9b6c8;
+    color: #a1a1aa;
     font-size: 18px;
     margin-bottom: 35px;
 }
@@ -136,22 +132,18 @@ img {
 
 .btn {
     display: inline-block;
-
-    background: #00d9ff;
-    color: #06111f;
-
+    background: linear-gradient(135deg, #a855f7, #9333ea);
+    color: #ffffff;
     padding: 14px 28px;
-
-    border-radius: 8px;
-
+    border-radius: 12px;
     font-weight: bold;
-
     transition: 0.3s;
+    box-shadow: 0 4px 20px rgba(168, 85, 247, 0.3);
 }
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 217, 255, 0.25);
+    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.5);
 }
 
 
@@ -162,20 +154,22 @@ img {
 .hero-decoration {
     width: 280px;
     height: 280px;
-
-    border: 2px solid #00d9ff;
+    border: 2px dashed #a855f7;
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-size: 70px;
-    color: #00d9ff;
+    color: #c084fc;
+    box-shadow: 
+        0 0 40px rgba(168, 85, 247, 0.15),
+        inset 0 0 40px rgba(168, 85, 247, 0.1);
+    animation: giroSuave 20s linear infinite;
+}
 
-    box-shadow:
-        0 0 30px rgba(0, 217, 255, 0.15),
-        inset 0 0 30px rgba(0, 217, 255, 0.08);
+@keyframes giroSuave {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 
@@ -187,7 +181,6 @@ img {
     width: 90%;
     max-width: 1200px;
     margin: auto;
-
     padding: 100px 0;
 }
 
@@ -196,19 +189,19 @@ img {
 }
 
 .section-title p {
-    color: #00d9ff;
+    color: #c084fc;
     font-size: 13px;
     letter-spacing: 4px;
     font-weight: bold;
 }
 
 .section-title h2 {
-    font-size: 50px;
+    font-size: 45px;
     margin: 10px 0;
 }
 
 .section-title span {
-    color: #8796aa;
+    color: #71717a;
 }
 
 
@@ -218,43 +211,38 @@ img {
 
 .team-container {
     display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
 
 .member-card {
-    background: #0d1b2d;
-
-    border: 1px solid #20334d;
-
-    border-radius: 15px;
-
+    background: #121216;
+    border: 1px solid #27272a;
+    border-radius: 20px;
     overflow: hidden;
-
-    transition: 0.3s;
+    transition: 0.4s ease;
 }
 
 .member-card:hover {
     transform: translateY(-8px);
-
-    border-color: #00d9ff;
-
-    box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.25);
+    border-color: #a855f7;
+    box-shadow: 0 20px 40px rgba(168, 85, 247, 0.15);
 }
 
 .member-image {
     height: 280px;
     overflow: hidden;
-    background: #14263d;
+    background: #18181b;
 }
 
 .member-image img {
     height: 100%;
     object-fit: cover;
+    transition: 0.5s;
+}
+
+.member-card:hover .member-image img {
+    transform: scale(1.05);
 }
 
 .member-info {
@@ -264,43 +252,40 @@ img {
 
 .member-number {
     position: absolute;
-
     right: 25px;
     top: 25px;
-
-    color: #00d9ff;
-
+    color: #c084fc;
     font-size: 25px;
     font-weight: bold;
 }
 
 .member-info h3 {
-    font-size: 28px;
+    font-size: 26px;
     margin-bottom: 5px;
 }
 
 .matricula {
-    color: #00d9ff;
+    color: #c084fc;
     font-size: 14px;
     margin-bottom: 15px;
+    font-weight: 500;
 }
 
 .member-info p {
-    color: #94a3b8;
+    color: #a1a1aa;
 }
 
 .card-btn {
     display: inline-block;
-
     margin-top: 25px;
-
-    color: #00d9ff;
-
+    color: #c084fc;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .card-btn:hover {
     color: white;
+    transform: translateX(5px);
 }
 
 
@@ -310,21 +295,13 @@ img {
 
 .project-section {
     min-height: 500px;
-
     padding: 100px 10%;
-
-    background:
-        linear-gradient(
-            135deg,
-            #0b1c31,
-            #092c3c
-        );
-
+    background: linear-gradient(135deg, #121216, #1e1b4b);
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
+    border-top: 1px solid #27272a;
+    border-bottom: 1px solid #27272a;
 }
 
 .project-content {
@@ -332,36 +309,32 @@ img {
 }
 
 .project-content h2 {
-    font-size: 60px;
-    line-height: 1;
+    font-size: 50px;
+    line-height: 1.1;
     margin-bottom: 25px;
 }
 
 .project-content h2 span {
-    color: #00d9ff;
+    color: #c084fc;
 }
 
 .project-content > p:not(.small-title) {
-    color: #a9b6c8;
+    color: #a1a1aa;
     margin-bottom: 30px;
 }
 
 .game-symbol {
     width: 230px;
     height: 230px;
-
-    border: 2px solid #00d9ff;
+    border: 2px solid #a855f7;
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    font-size: 130px;
-
-    color: #00d9ff;
-
-    box-shadow: 0 0 50px rgba(0, 217, 255, 0.15);
+    font-size: 120px;
+    color: #c084fc;
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.2);
+    background: rgba(168, 85, 247, 0.05);
 }
 
 
@@ -370,22 +343,19 @@ img {
 ===================================================== */
 
 footer {
-    background: #040b14;
-
-    border-top: 1px solid #20334d;
-
+    background: #050507;
+    border-top: 1px solid #27272a;
     padding: 50px 10%;
-
     text-align: center;
 }
 
 .footer-content h3 {
-    color: #00d9ff;
+    color: #c084fc;
     margin-bottom: 10px;
 }
 
 .footer-content p {
-    color: #64748b;
+    color: #71717a;
     font-size: 14px;
 }
 
@@ -395,7 +365,6 @@ footer {
 ===================================================== */
 
 @media (max-width: 800px) {
-
     .navbar {
         flex-direction: column;
         padding: 20px 0;
@@ -436,19 +405,18 @@ footer {
     }
 
     .project-content h2 {
-        font-size: 45px;
+        font-size: 40px;
     }
 }
 
 
 @media (max-width: 500px) {
-
     .hero h1 {
-        font-size: 50px;
+        font-size: 42px;
     }
 
     .section-title h2 {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     .member-image {
