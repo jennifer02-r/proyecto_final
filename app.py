@@ -12,7 +12,7 @@ def juego():
 
 @app.route('/integrante1')
 def integrante1():
-    return render_template('integrante1.html')
+    return render_template('PAGINA.html')
 
 if __name__ == '__main__':
     app.run()
