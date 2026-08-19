@@ -7,7 +7,7 @@
     <enlace rel="hoja de estilo"href="estilo.css">
     <!-- Iconos opcionales de FontAwesome para el diseño -->
     <enlace rel="hoja de estilo"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+       <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos2.css') }}">
 </cabeza>
 <cuerpo>
     <!-- =====================================================
@@ -42,7 +42,7 @@
                 <a href="#sobre-mi"clase="botón">Conocer más</a>
             </div>
             <div clase="foto">
-                <imagen src="Imagen de Jennifer.jpg"alt="Fotografía personal">
+              <img src="{{ url_for('static', filename='imagenes/integrante2.jpeg') }}" alt="Fotografía personal">
             </div>
         </div>
     </sección>
